@@ -1,0 +1,66 @@
+📌 Pasos para configurar el proyecto
+
+1️⃣ Configuración del entorno backend (Django)
+Crear un entorno virtual (recomendado para aislar las dependencias del proyecto):
+
+bash:
+python -m venv venv
+
+
+Activar el entorno virtual:
+
+En Windows (CMD o PowerShell):
+bash
+
+venv\Scripts\activate
+En macOS/Linux:
+bash
+source venv/bin/activate
+
+
+Instalar las dependencias necesarias de Django y DRF:
+
+Crear la base de datos y las tablas en PostgreSQL antes de ejecutar las migraciones:
+
+Abrir pgAdmin o conectarse a PostgreSQL mediante la terminal.
+Ejecutar el archivo SQL presente en el proyecto para crear la base de datos y las tablas necesarias.
+Verificar que la conexión esté configurada en settings.py:
+
+python
+Copiar código
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_base_de_datos',
+        'USER': 'tu_usuario',
+        'PASSWORD': 'tu_contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+Ejecutar las migraciones del modelo:
+
+bash:
+
+python manage.py makemigrations
+python manage.py migrate
+
+Ejecutar el servidor de desarrollo:
+
+bash:
+python manage.py runserver
+
+2️⃣ Documentación de la API
+La documentación de la API está disponible en:
+📌 http://127.0.0.1:8000/docs/
+Aquí se pueden visualizar y probar los endpoints de la API.
+
+3️⃣ Configuración del frontend (React)
+Instalar las dependencias con npm (dentro de la carpeta del frontend):
+bash
+npm install
+Ejecutar el frontend en modo desarrollo:
+bash
+
+npm run dev
+✅ Con estos pasos, el backend y el frontend estarán corriendo correctamente.
