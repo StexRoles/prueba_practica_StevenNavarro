@@ -3,7 +3,7 @@ CREATE DATABASE PruebaUNP_StevenNavarro;
 CREATE TABLE Usuarios (
     id SERIAL PRIMARY KEY NOT NULL,
     nombreUsuario VARCHAR(100) NOT NULL UNIQUE,
-    contraseña VARCHAR(150) NOT NULL
+    password VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE Beneficiarios (
