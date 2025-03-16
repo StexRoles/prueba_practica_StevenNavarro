@@ -1,10 +1,10 @@
 # Login con Django y React 
 
-Este proyecto implementa una api con Django (backend) y React (frontend) para gestionar el acceso de usuarios y la gestion de beneficiarios.
+Este proyecto implementa una api con Django (backend) y React (frontend) para gestionar el acceso de usuarios y la gestion de beneficiarios por medio de una API.
 
 ## 🚀 Tecnologías utilizadas
 - **Backend**: Django, Django REST Framework
-- **Frontend**: React, React Router, Tailwindcss, SweetAlert
+- **Frontend**: React, React Router, Tailwindcss, SweetAlert, Axios
 - **Base de datos**: PostgreSQL
 
 ---
@@ -17,8 +17,8 @@ pip install -r requirements.txt
 ```
 
 ### 2️⃣ Crear la base de datos en pgAdmin 4
-1. Utilizar el archivo database.sql para crear baase de datos y tablas
-2. Verificar las conexion con la base de datos de postgresql en settings.py
+1. Utilizar el archivo database.sql para crear base de datos y tablas
+2. Verificar las conexión con la base de datos de postgresql en settings.py
 
 
 
@@ -72,6 +72,6 @@ npm run dev
 2. Intentar acceder a `/dashboard` y verificar que redirige a `/login`.
 
 ### 🛠 Prueba con Postman
-1. Enviar una peticiones a `http://127.0.0.1:8000/api/` con:
+1. Enviar peticiones a `http://127.0.0.1:8000/api/` y verificar que respondan correctamente
 
 ---
